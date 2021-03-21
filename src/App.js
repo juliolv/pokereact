@@ -1,57 +1,64 @@
 import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+
+import PokemonForm from './features/pokemonForm/PokemonForm';
+import CapturedPokemons from './features/pokemonList/CapturedPokemons';
+
+import Container from '@material-ui/core/Container';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import { makeStyles } from '@material-ui/core/styles';
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import red from '@material-ui/core/colors/red';
+
+const theme = createMuiTheme({
+  palette: {
+    primary: red,
+  },
+});
+
+const useStyles = makeStyles((theme) => ({
+  content: {
+    flexGrow: 1,
+    height: '100%',
+    overflow: 'auto',
+  },
+  container: {
+    paddingTop: theme.spacing(4),
+    paddingBottom: theme.spacing(4),
+  },
+}));
 
 function App() {
+  const classes = useStyles();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
-    </div>
+    <React.Fragment>
+      <ThemeProvider theme={theme}>
+        <main className={classes.content}>
+          <CssBaseline />
+          <AppBar position="static">
+            <Toolbar>
+              <Typography
+                variant="h6"
+                color="inherit"
+                noWrap
+                className={classes.title}
+              >
+                PokeReact
+              </Typography>
+            </Toolbar>
+          </AppBar>
+          <Container component="main" maxWidth="xs">
+            <PokemonForm />
+          </Container>
+          <Container maxWidth="lg" className={classes.container}>
+            <CapturedPokemons />
+          </Container>
+        </main>
+      </ThemeProvider>
+    </React.Fragment>
   );
 }
 

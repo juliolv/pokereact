@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { capture } from '../capturePokemon/pokemonSlice';
+import { capture } from './pokemonSlice';
 
 import TextField from '@material-ui/core/TextField';
 import Alert from '@material-ui/lab/Alert';

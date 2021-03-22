@@ -1,7 +1,7 @@
 import React from 'react';
 
-import PokemonForm from './features/pokemonForm/PokemonForm';
-import CapturedPokemons from './features/pokemonList/CapturedPokemons';
+import PokemonForm from './features/pokedex/PokemonForm';
+import CapturedPokemons from './features/pokedex/CapturedPokemons';
 
 import Container from '@material-ui/core/Container';
 import AppBar from '@material-ui/core/AppBar';

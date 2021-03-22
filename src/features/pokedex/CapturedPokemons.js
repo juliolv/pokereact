@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { selectCapturedPokemons } from '../capturePokemon/pokemonSlice';
+import { selectCapturedPokemons } from './pokemonSlice';
 import PokemonItem from './PokemonItem';
 
 import { makeStyles } from '@material-ui/core/styles';

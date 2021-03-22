@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-2"
+  data-testid="pokemon-1"
+>
+  <div
+    className="MuiPaper-root MuiCard-root makeStyles-card-3 MuiPaper-elevation1 MuiPaper-rounded"
+  >
+    <div
+      className="MuiCardMedia-root makeStyles-cardMedia-4"
+      style={
+        Object {
+          "backgroundImage": "url(\\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png\\")",
+        }
+      }
+      title="bulbasaur"
+    />
+    <div
+      className="MuiCardContent-root makeStyles-cardContent-5"
+    >
+      <h2
+        className="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom"
+      >
+        bulbasaur
+      </h2>
+      <p
+        className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary"
+      >
+        Order: 
+        1
+      </p>
+    </div>
+    <div
+      className="MuiCardActions-root MuiCardActions-spacing"
+    >
+      <button
+        className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-textSizeSmall MuiButton-sizeSmall"
+        disabled={false}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDragLeave={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex={0}
+        type="button"
+      >
+        <span
+          className="MuiButton-label"
+        >
+          Release
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+`;

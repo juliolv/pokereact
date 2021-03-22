@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
-import pokemonReducer from '../features/capturePokemon/pokemonSlice';
+import pokemonReducer from '../features/pokedex/pokemonSlice';
 
 export default configureStore({
   reducer: {

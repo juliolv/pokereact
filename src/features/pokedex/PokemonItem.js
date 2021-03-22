@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { release } from '../capturePokemon/pokemonSlice';
+import { release } from './pokemonSlice';
 
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
@@ -35,17 +35,17 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const PokemonItem = (props) => {
+const PokemonItem = ({ pokemon }) => {
   const classes = useStyles();
   const dispatch = useDispatch();
-  const { id, name, img } = props.pokemon;
+  const { id, name, img } = pokemon;
 
   const releasePokemon = (id) => {
     dispatch(release(id));
   };
 
   return (
-    <Grid item key={id} xs={2}>
+    <Grid item key={id} xs={2} data-testid={`pokemon-${id}`}>
       <Card className={classes.card}>
         <CardMedia className={classes.cardMedia} image={img} title={name} />
         <CardContent className={classes.cardContent}>
